@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+
+import sys
+import json
+import classifier
+
+if __name__ == "__main__":
+    parameters = sys.argv[1]
+    classifier.classify(json.loads(parameters))
