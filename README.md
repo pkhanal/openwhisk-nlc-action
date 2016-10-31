@@ -28,8 +28,8 @@ You can see the sample classes and training data created using NLC toolkit in th
 
 Here, we have created few classes and added some training data to create a classifier. Normally, you will go through multiple iteration depending on the size of the training data to ensure that classification works as expected for new texts.
 
-# Create OpenWhisk Action
-[https://developer.ibm.com/openwhisk/](OpenWhisk) provides a distributed compute service to execute application logic in response to events. It is similar to other serverless computing platforms such as [AWS Lambda](https://aws.amazon.com/lambda/), [Azure Functions](https://azure.microsoft.com/en-us/services/functions/), [Google Cloud Functions](https://cloud.google.com/functions/), [webtask](https://webtask.io/) etc..
+# OpenWhisk Action
+(OpenWhisk)[https://developer.ibm.com/openwhisk/] provides a distributed compute service to execute application logic in response to events. It is similar to other serverless computing platforms such as [AWS Lambda](https://aws.amazon.com/lambda/), [Azure Functions](https://azure.microsoft.com/en-us/services/functions/), [Google Cloud Functions](https://cloud.google.com/functions/), [webtask](https://webtask.io/) etc..
 
 We will create a [docker action](https://console.ng.bluemix.net/docs/openwhisk/openwhisk_actions.html#openwhisk_actions_docker) for this example. The logic is written is python ([classifier.py](docker-action/client/classifier.py)). The logic uses the Natural Language Classifeir created earlier to process the input text and outputs the response that tells whether the input text is querying the state of the IoT device or it is trying to control the IoT device.
 
@@ -48,5 +48,5 @@ The example response when the input text is "turn on the fan":
 The response is a bit raw but it tells you that the text is a **command** and it is trying to change the state of the device to **on**.
 
 # Conclusion
-This was a quick and high level walkthrough on how we can build serverless natural language interface that can be extended to IoT solution. The input text for this example can come from different sources which can trigger OpenWhisk action and the output can be used to interact with IoT device. In future articles, we will show how can we trigger OpenWhisk actions based on sms, voice or other events.
+This was a quick and high level walkthrough on how we can build serverless natural language interface that can be extended to IoT solution. We also saw that with OpenWhisk we don't have to worry about provisioning and managing the server. The input text for this example can come from different sources which can trigger OpenWhisk action and the output can be used to interact with IoT device. In future articles, we will show how can we trigger OpenWhisk actions based on sms, voice or other events.
  
